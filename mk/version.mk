@@ -1,3 +1,3 @@
 # version
-LINUX_VER  = 3.16.43
-DEBIAN_VER = 8.11
+LINUX_VER  = 3.16.85
+DEBIAN_VER = 8.11.1
