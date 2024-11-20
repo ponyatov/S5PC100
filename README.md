@@ -3,7 +3,11 @@
 
 github: https://github.com/ponyatov/S5PC100
 
-# [[Samsung]] S5PC100
+## cross
+
+https://github.com/ponyatov/L/tree/gambox
+
+## [[Samsung]] S5PC100
 
 https://sravnismart.ru/cpu/samsung-s5pc100/
 
