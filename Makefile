@@ -1,13 +1,5 @@
-# doc
-.PHONY: doc
-doc:
-
-# install
-.PHONY: install update ref gz
-install: doc ref gz
-	$(MAKE) update
-update:
-	sudo apt update
-	sudo apt install -uy `cat apt.Debian` $(APT)
-ref:
-gz:
+include mk/cross.mk
+include mk/dirs.mk
+include mk/tool.mk
+include mk/doc.mk
+include mk/install.mk
