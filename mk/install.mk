@@ -5,5 +5,5 @@ install: doc ref gz
 update:
 	sudo apt update
 	sudo apt install -uy `cat apt.Debian` $(APT)
-ref:
-gz:
+ref: $(REF)
+gz:  $(GZ)

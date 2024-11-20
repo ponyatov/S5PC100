@@ -1,3 +1,4 @@
+include mk/version.mk
 include mk/cross.mk
 include mk/dirs.mk
 include mk/tool.mk

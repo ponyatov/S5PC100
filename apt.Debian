@@ -1,4 +1,4 @@
 git make curl
 code meld doxygen clang-format
-cmake g++-12-arm-linux-gnueabihf
+cmake g++-arm-linux-gnueabihf
 openocd gdb-multiarch

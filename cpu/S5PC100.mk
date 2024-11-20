@@ -1,0 +1,1 @@
+ARCH = CortexA8
