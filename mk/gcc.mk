@@ -16,8 +16,8 @@ isl:   $(REF)/$(ISL)/README.md
 
 cloog: $(GZ)/$(CLOOG_GZ)
 
-BINUTILS_CFG += --with-isl=$(TMP)
+BINUTILS_CFG += --with-isl=$(CROSS) --with-sysroot=$(ROOT)
 .PHONY: binutils
 binutils: $(REF)/$(BINUTILS)/README.md
 	rm -rf $(TMP)/$@ ; mkdir $(TMP)/$@ ; cd $(TMP)/$@ ;\
-	$(REF)/$(BINUTILS)/$(CFG)$@ --target=$(TARGET)
+	$(REF)/$(BINUTILS)/$(CFG)$@ --target=$(TARGET) | grep isl
