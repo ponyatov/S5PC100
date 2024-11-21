@@ -12,8 +12,7 @@ mpfr:  $(GZ)/$(MPFR_GZ)
 ISL_CFG = $(CCLIBS_CFG)
 isl:   $(REF)/$(ISL)/README.md
 	rm -rf $(TMP)/$@ ; mkdir $(TMP)/$@ ; cd $(TMP)/$@ ;\
-	PATH=$(XPATH) $(REF)/$(ISL)/$(CFG)$@ $(ISL_CFG) &&\
-	$(MAKE) -j$(CORES) && $(MAKE) install
+	$(REF)/$(ISL)/$(CFG) $(ISL_CFG) && $(MAKE) -j$(CORES) && $(MAKE) install
 
 cloog: $(GZ)/$(CLOOG_GZ)
 
@@ -21,4 +20,4 @@ BINUTILS_CFG += --with-isl=$(TMP)
 .PHONY: binutils
 binutils: $(REF)/$(BINUTILS)/README.md
 	rm -rf $(TMP)/$@ ; mkdir $(TMP)/$@ ; cd $(TMP)/$@ ;\
-	PATH=$(XPATH) $(REF)/$(BINUTILS)/$(CFG)$@ --target=$(TARGET)
+	$(REF)/$(BINUTILS)/$(CFG)$@ --target=$(TARGET)
