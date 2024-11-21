@@ -2,3 +2,4 @@ git make curl
 code meld doxygen clang-format
 cmake g++-arm-linux-gnueabihf
 openocd gdb-multiarch
+flex bison libreadline-dev ragel
