@@ -8,3 +8,6 @@ mpc:   $(DISTR)/$(MPC_GZ)
 mpfr:  $(DISTR)/$(MPFR_GZ)
 isl:   $(DISTR)/$(ISL_GZ)
 cloog: $(DISTR)/$(CLOOG_GZ)
+
+.PHONY: binutils
+binutils: $(REF)/$(BINUTILS)/README.md
