@@ -1,5 +1,9 @@
 # gcc toolchain
 
+GZ += $(DISTR)/$(BINUTILS_GZ)
+$(DISTR)/$(BINUTILS_GZ):
+	$(CURL) $@ $(BINUTILS_URL)/$(BINUTILS_GZ)
+
 GZ += $(DISTR)/$(GCC_GZ)
 $(DISTR)/$(GCC_GZ):
 	$(CURL) $@ $(GCC_URL)/$(GCC)/$(GCC_GZ)

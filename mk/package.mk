@@ -17,6 +17,10 @@ CLOOG_GZ = $(CLOOG).tar.gz
 
 CCLIBS_URL = https://mirror.linux-ia64.org/gnu/gcc/infrastructure
 
-GCC = gcc-$(GCC_VER)
-GCC_GZ = $(GCC).tar.xz
+GCC     = gcc-$(GCC_VER)
+GCC_GZ  = $(GCC).tar.xz
 GCC_URL = https://mirror.linux-ia64.org/gnu/gcc/releases
+
+BINUTILS     = binutils-$(BINUTILS_VER)
+BINUTILS_GZ  = $(BINUTILS).tar.xz
+BINUTILS_URL = https://mirror.truenetwork.ru/gnu/binutils

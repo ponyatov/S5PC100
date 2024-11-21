@@ -8,4 +8,5 @@ MPFR_VER  = 4.1.0
 ISL_VER   = 0.24
 CLOOG_VER = 0.18.1
 
-GCC_VER = 9.5.0
+BINUTILS_VER = 2.43.1
+GCC_VER      = 9.5.0
