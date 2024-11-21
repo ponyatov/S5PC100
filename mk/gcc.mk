@@ -19,8 +19,10 @@ cloog:   $(REF)/$(CLOOG)/README.md
 	rm -rf $(TMP)/$@ ; mkdir $(TMP)/$@ ; cd $(TMP)/$@ ;\
 	$(REF)/$(CLOOG)/$(CFG) $(CLOOG_CFG) && $(MAKE) -j$(CORES) && $(MAKE) install
 
-BINUTILS_CFG += --with-isl=$(CROSS) --with-sysroot=$(ROOT)
+BINUTILS_CFG += --with-sysroot=$(ROOT)
+# BINUTILS_CFG += --with-isl=$(CROSS)
 .PHONY: binutils
 binutils: $(REF)/$(BINUTILS)/README.md
 	rm -rf $(TMP)/$@ ; mkdir $(TMP)/$@ ; cd $(TMP)/$@ ;\
-	$(REF)/$(BINUTILS)/$(CFG)$@ --target=$(TARGET) | grep isl
+	$(REF)/$(BINUTILS)/$(CFG) $(BINUTILS_CFG) --target=$(TARGET) &&\
+	$(MAKE) -j$(CORES) && $(MAKE) install
