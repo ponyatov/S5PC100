@@ -1,3 +1,11 @@
 # version
 LINUX_VER  = 3.16.85
 DEBIAN_VER = 8.11.1
+
+GMP_VER   = 6.2.1
+MPC_VER   = 1.2.1
+MPFR_VER  = 4.1.0
+ISL_VER   = 0.24
+CLOOG_VER = 0.18.1
+
+GCC_VER = 9.5.0
