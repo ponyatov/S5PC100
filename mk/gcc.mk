@@ -7,15 +7,28 @@ $(DISTR)/$(GCC_GZ):
 .PHONY: cclibs gmp mpc mpfr isl cloog
 cclibs: gmp mpc mpfr isl cloog
 
-gmp:
-mpc:
-mpfr:
-isl:
-cloog:
+gmp:   $(DISTR)/$(GMP_GZ)
+mpc:   $(DISTR)/$(MPC_GZ)
+mpfr:  $(DISTR)/$(MPFR_GZ)
+isl:   $(DISTR)/$(ISL_GZ)
+cloog: $(DISTR)/$(CLOOG_GZ)
 
+GZ += $(DISTR)/$(GMP_GZ)
+$(DISTR)/$(GMP_GZ):
 	$(CURL) $@ $(CCLIBS_URL)/$(GMP_GZ)
-/gmp-6.2.1.tar.bz2
-/mpc-1.2.1
-/mpfr-4.1.0
-/isl-0.24.tar.bz2
-/cloog-0.18.1.tar.gz
+
+GZ += $(DISTR)/$(MPFR_GZ)
+$(DISTR)/$(MPFR_GZ):
+	$(CURL) $@ $(CCLIBS_URL)/$(MPFR_GZ)
+
+GZ += $(DISTR)/$(MPC_GZ)
+$(DISTR)/$(MPC_GZ):
+	$(CURL) $@ $(CCLIBS_URL)/$(MPC_GZ)
+
+GZ += $(DISTR)/$(ISL_GZ)
+$(DISTR)/$(ISL_GZ):
+	$(CURL) $@ $(CCLIBS_URL)/$(ISL_GZ)
+
+GZ += $(DISTR)/$(CLOOG_GZ)
+$(DISTR)/$(CLOOG_GZ):
+	$(CURL) $@ $(CCLIBS_URL)/$(CLOOG_GZ)
