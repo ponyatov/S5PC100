@@ -2,3 +2,4 @@ git make curl
 code meld doxygen clang-format
 cmake openocd
 flex bison libreadline-dev ragel
+xz-utils bc libncurses-dev

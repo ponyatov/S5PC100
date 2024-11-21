@@ -32,6 +32,6 @@ $(GZ)/$(GCC_GZ):
 
 # cross ref
 
-# REF += ref/gambox/README.md
+REFS += ref/gambox/README.md
 ref/gambox/README.md:
 	$(GITREF) -b gambox https://github.com/ponyatov/L.git $(dir $@)
