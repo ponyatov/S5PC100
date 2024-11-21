@@ -11,5 +11,5 @@ $(REF)/%/README.md: $(GZ)/%.tar.xz
 	cd ref ; xzcat $< | tar -x && touch $@
 $(REF)/%/README.md: $(GZ)/%.tar.bz2
 	cd ref ; bzcat $< | tar -x && touch $@
-$(REF)/%/README.md: $(GZ)/%.tar.xz
-	cd ref ; xzcat $< | tar -x && touch $@
+$(REF)/%/README.md: $(GZ)/%.tar.gz
+	cd ref ;  zcat $< | tar -x && touch $@

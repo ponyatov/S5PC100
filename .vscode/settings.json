@@ -25,6 +25,8 @@
     },
     "files.watcherExclude": {
         "ref/**": true,
+        "cross/**": true,
+        "root/**": true,
     },
     "files.associations": {
         "lib/*.ini": "flic", "lib/.f": "flic",

@@ -14,7 +14,10 @@ isl:   $(REF)/$(ISL)/README.md
 	rm -rf $(TMP)/$@ ; mkdir $(TMP)/$@ ; cd $(TMP)/$@ ;\
 	$(REF)/$(ISL)/$(CFG) $(ISL_CFG) && $(MAKE) -j$(CORES) && $(MAKE) install
 
-cloog: $(GZ)/$(CLOOG_GZ)
+CLOOG_CFG = $(CCLIBS_CFG)
+cloog:   $(REF)/$(CLOOG)/README.md
+	rm -rf $(TMP)/$@ ; mkdir $(TMP)/$@ ; cd $(TMP)/$@ ;\
+	$(REF)/$(CLOOG)/$(CFG) $(CLOOG_CFG) && $(MAKE) -j$(CORES) && $(MAKE) install
 
 BINUTILS_CFG += --with-isl=$(CROSS) --with-sysroot=$(ROOT)
 .PHONY: binutils
