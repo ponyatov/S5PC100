@@ -7,5 +7,5 @@ tmp/%.lexer.cpp: src/%.lex
 tmp/%.parser.cpp: src/%.yacc
 	bison -o $@ $<
 
-$(REF)/%/README.md: $(DISTR)/%.tar.xz
+$(REF)/%/README.md: $(GZ)/%.tar.xz
 	cd ref ; xzcat $< | tar -x && touch $@
