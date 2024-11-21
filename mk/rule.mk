@@ -6,3 +6,6 @@ tmp/%.lexer.cpp: src/%.lex
 	flex -o $@ $<
 tmp/%.parser.cpp: src/%.yacc
 	bison -o $@ $<
+
+$(REF)/%/README.md: $(DISTR)/%.tar.xz
+	cd ref ; xzcat $< | tar -x && touch $@
