@@ -11,3 +11,9 @@ cloog: $(DISTR)/$(CLOOG_GZ)
 
 .PHONY: binutils
 binutils: $(REF)/$(BINUTILS)/README.md
+	rm -rf $(TMP)/$@ ; mkdir $(TMP)/$@ ; cd $(TMP)/$@ ;\
+	$(REF)/$(BINUTILS)/configure --target=$(TARGET)
+
+REF += ref/gambox/README.md
+ref/gambox/README.md:
+	$(GITREF) -b gambox https://github.com/ponyatov/L.git $(dir $@)
