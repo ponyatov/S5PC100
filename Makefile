@@ -11,6 +11,7 @@ include mk/format.mk
 include mk/rule.mk
 include mk/doc.mk
 include mk/package.mk
+include mk/cclibs.mk
 include mk/gcc.mk
 include mk/kernel.mk
 include mk/gz.mk
